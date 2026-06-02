@@ -1,0 +1,258 @@
+.products {
+  padding: 100px 24px;
+  background: var(--bg-surface);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.sectionTag {
+  display: inline-block;
+  background: var(--blue-light);
+  color: var(--blue-primary);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 50px;
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  max-width: 560px;
+}
+
+.titleAccent {
+  color: var(--blue-primary);
+}
+
+.desc {
+  font-size: 16px;
+  color: var(--text-light);
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+/* Deploy Badges */
+.deployBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.deployBadge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 50px;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  color: var(--text-mid);
+  transition: all 0.2s ease;
+}
+
+.deployBadge:hover {
+  border-color: var(--blue-primary);
+  color: var(--blue-primary);
+  background: var(--blue-light);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Card */
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  border: 1.5px solid var(--border);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card:hover,
+.cardActive {
+  box-shadow: var(--shadow-md);
+  border-color: var(--blue-primary);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardIconWrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--blue-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardIcon {
+  font-size: 24px;
+}
+
+.cardCategory {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--blue-primary);
+  background: var(--blue-light);
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.cardDesc {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.65;
+  flex: 1;
+}
+
+/* Expanded */
+.cardExpanded {
+  overflow: hidden;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 0 4px;
+  border-top: 1px solid var(--border);
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--text-mid);
+  font-weight: 500;
+}
+
+.featureDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blue-primary);
+  flex-shrink: 0;
+}
+
+/* Card Footer */
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.deployTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.deployTag {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 50px;
+  background: color-mix(in srgb, var(--deploy-color, #0057FF) 10%, white);
+  color: var(--deploy-color, #0057FF);
+  letter-spacing: 0.3px;
+}
+
+.expandBtn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--blue-light);
+  color: var(--blue-primary);
+  font-size: 18px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+  line-height: 1;
+}
+
+.expandBtn:hover {
+  background: var(--blue-primary);
+  color: white;
+}
+
+/* Tenancy Note */
+.tenancyNote {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-light);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 12px 28px;
+  border-radius: 50px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .products {
+    padding: 72px 20px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
