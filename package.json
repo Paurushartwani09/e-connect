@@ -1,9 +1,9 @@
 {
-  "name": "e-connect-react",
+  "name": "e-connect",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-    "homepage": "https://Paurushartwani09.github.io/E-connect",
+    "homepage": "https://Paurushartwani09.github.io/e-connect",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
